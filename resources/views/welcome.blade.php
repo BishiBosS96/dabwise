@@ -308,5 +308,5 @@
 @endsection
 @section('scripts')
 <script src="{{asset('js/moment.js')}}"></script>
-<script src="{{asset('js/index.js')}}"></script>
+<script src="{{asset('js/index.js')}}"></script>  
 @endsection
