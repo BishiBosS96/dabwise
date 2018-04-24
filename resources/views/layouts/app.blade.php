@@ -11,71 +11,60 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/semantic.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+    
+        
+        
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+        <div id="app" class="container-fluid">
+          <div class="row row-offcanvas">
+            
+            <div class="sidebar-offcanvas sidebar">
+              
+              <div class="panel panel-default">
+                <div class="panel-heading">Widget</div>
+                <div class="panel-body">
+                  <p><a href="#"><i class="glyphicon glyphicon-check"></i> Action item</a></p>
+                  <p><a href="#"><i class="glyphicon glyphicon-unchecked"></i> Action item</a></p>
+                  <p class=""><a href="#"><i class="glyphicon glyphicon-plus"></i> Action item</a></p>
+                  <p class=""><a href="#"><i class="glyphicon glyphicon-minus"></i> Action item</a></p>
+                  <p><a href="#"><i class="glyphicon glyphicon-plus"></i> Action item</a></p>
+                  <p><a href="#"><i class="glyphicon glyphicon-list"></i> Action item</a></p>
                 </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Iniciar sesión</a></li>
-                            <li><a href="{{ route('register') }}">Registrarse</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Cerrar sesión
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
+              </div><!--/.panel-->
+              
+              <div class="panel panel-default">
+                <div class="panel-heading">Widget</div>
+                <div class="panel-body">
+                  <p><a href="#"><i class="glyphicon glyphicon-check"></i> Action item</a></p>
+                  <p><a href="#"><i class="glyphicon glyphicon-unchecked"></i> Action item</a></p>
+                  <p class=""><a href="#"><i class="glyphicon glyphicon-plus"></i> Action item</a></p>
+                  <p class=""><a href="#"><i class="glyphicon glyphicon-minus"></i> Action item</a></p>
+                  <p><a href="#"><i class="glyphicon glyphicon-plus"></i> Action item</a></p>
+                  <p><a href="#"><i class="glyphicon glyphicon-list"></i> Action item</a></p>
                 </div>
-            </div>
-        </nav>
+              </div><!--/.panel-->    
+            </div><!-- /.cols-->
+            
+              <div class="content">
+              <p class="pull-right">
+                <a type="button" class="btn btn-collapse btn-sm" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-down"></i> Sidebar</a>
+              </p>
+          
+              
+                
+              </div>
+            </div><!-- /.cols-->
+         
+        
 
         @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/semantic.min.js') }}"></script>
 </body>
 </html>
