@@ -98,7 +98,7 @@ class HomeController extends Controller
 
     public function excel(){
         return response()->download('../storage/app/public/reporte_'.date('d-m-Y').'.xlsx', 
-            "Reporte_".date('d-m-Y'), 
+            "Reporte_".date('d-m-Y').".xlsx", 
             ["Content-Type" => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]);
     }
 

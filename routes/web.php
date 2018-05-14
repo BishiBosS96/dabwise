@@ -18,6 +18,7 @@ Route::get('/products', 'ProductsController@index')->name('products');
 Route::get("/gas", "HomeController@gas")->name("gas");
 Route::post("/gass", "HomeController@gass")->name("gass");
 Route::get("/excel", "HomeController@excel")->name("excel");
+Route::get("/swiman", "ProductsController@swiman")->name("swiman");
 
 
 
