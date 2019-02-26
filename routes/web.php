@@ -12,13 +12,5 @@
 */
 
 
-Route::get('/version2', 'HomeController@index2')->name('home2');
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/products', 'ProductsController@index')->name('products');
-Route::get("/gas", "HomeController@gas")->name("gas");
-Route::post("/gass", "HomeController@gass")->name("gass");
-Route::get("/excel", "HomeController@excel")->name("excel");
-Route::get("/swiman", "ProductsController@swiman")->name("swiman");
-
-
-
